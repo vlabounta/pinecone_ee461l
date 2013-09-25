@@ -80,4 +80,14 @@ describe User do
     it { should_not be_valid }
   end
 
+  describe "when password doesn't match confirmation" do
+    before { @user.password_confirmation = "mismatch" }
+    it { should_not be_valid }
+  end
+
+  describe "with a passwird that is too short" do
+    before { @user.password = @user.password_confirmation = "a" * 5 }
+    it { should be_invalid }
+  end
+
 end
