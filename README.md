@@ -9,7 +9,7 @@ Creators
 -Dan Salzman
 
 Company:
-View our company [*landing page*](projectpinecone.com)
+View our company [*landing page*](http://projectpinecone.com)
 
 Heroku:
-The production app is hosted at [*projectpinecone.herokuapp.com*](projectpinecone.herokuapp.com)
+The production app is hosted at [*projectpinecone.herokuapp.com*](http://projectpinecone.herokuapp.com)
