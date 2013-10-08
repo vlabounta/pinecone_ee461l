@@ -1,0 +1,210 @@
+
+.login-container
+{
+	margin: 0px auto;
+	margin-top: 130px;
+	width: 600px;
+}
+.pinecone-bg
+{
+	background: url(../images/pinecone-bg.png) 0 0 no-repeat;
+	background-position: center top;
+}
+.pinecone-logo
+{
+	background: url(../images/pinecone-logo.png) 0 0 no-repeat;
+	background-size: 350px 75px;
+	margin: 0 125px;
+	height: 75px;
+	position: relative;
+	opacity: 0.6;
+}
+.remember-user
+{
+	float: left;
+}
+.login-metaLink
+{
+	text-align: right;
+	margin: 0px;
+}
+.login-link:first-child
+{
+	margin-top: 15px;
+}
+.footer
+{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	padding: 20px 40px;
+	background-color: #bdc3c7;
+	margin-top: -130px;
+	color: white;
+}
+.about-footer
+{
+	color: white;
+}
+.contact-footer
+{
+	float: right;
+	color: white;
+}
+
+
+.top-menu
+{
+	background-color: #bdc3c7;
+	width: 100%;
+	padding: 0px 20px;
+	height: 41px;
+}
+.pinecone-image
+{
+	background: url(../images/pinecone_image.png) 0 0 no-repeat;
+	background-size: 30px 40px;
+	height: 50px;
+	width: 40px;
+	float: left;
+	margin: 0px 5px 0px 5px;
+}
+#search-bar
+{
+	float: left;
+	width: 30%;
+	min-width: 75px;
+	margin-top: 5px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.header-right
+{
+	float: right;
+	margin: 0px 10px 0px 20px;
+}
+.user-name
+{
+	font-size: 20px;
+	margin-top: 10px;
+	float: left;
+}
+.user-options
+{
+	display: inline;
+	width: 150px; !important
+	padding: 5px 5px 5px 15px; 
+	margin: 0px 20px;
+}
+.options-dropdown
+{
+	float: right;
+	width: 150px;
+	margin-right: 50px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+.profile-container
+{
+	margin-top: 50px
+}
+.profile-picture
+{
+	background: url(../images/demo/video.jpg) 0 0 no-repeat;
+	background-size: 300px 250px;
+	height: 200px;
+	width: 300px;
+	float: left;
+	margin: 0px 20px 0px 50px;
+	border-radius: 16px;
+}
+.relevant-docs
+{
+	margin-top: -50px;
+	border-right: 1px #bdc3c7 solid;
+	width: 225px;
+	height: 550px;
+	float: left;
+}
+.docs-header
+{
+	margin-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 2px #bdc3c7 solid;
+
+	font-size: 20px;
+	text-align: center;
+}
+
+.user-doc
+{
+	padding-top: 15px;
+	padding-left: 20px;
+	height: 65px;
+	width: 225px;
+	border-bottom: 1px #bdc3c7 solid;
+}
+.mail-doc
+{
+	background: url(../images/icons/png/Mail.png) 0 0 no-repeat;
+	background-size: 40px 30px;
+	height: 40px;
+	width: 50px;
+	float: left;
+}
+.chat-doc
+{
+	background: url(../images/icons/png/Chat.png) 0 0 no-repeat;
+	background-size: 40px 30px;
+	height: 40px;
+	width: 50px;
+	float: left;
+}
+.personal-info
+{
+	//margin: 50px 0px;
+}
+.profile-name
+{
+	font-size: 28px;
+}
+.profile-contact
+{
+	font-size: 18px;
+}
+.profile-contact:first-child
+{
+	margin-top: 5px;
+}
+.profile-contact:last-child
+{
+	margin-bottom: 10px;
+}
+.badges
+{
+	margin-top: 15px;
+	margin-right:20px;
+	float: left; 
+}
+.badge-icon
+{
+	background: black;
+	height: 30px;
+	width: 30px;
+	border-radius: 16px;
+	margin: 0px auto 5px;
+	display: block;
+}
+.badge-name
+{
+	margin: 0px auto;
+}
+.block
+{
+	display: block;
+}
+.margin-top15
+{
+	margin-top: 15px;
+}
+
