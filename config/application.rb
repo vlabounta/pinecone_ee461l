@@ -13,6 +13,7 @@ Bundler.require(:default, Rails.env)
 
 module Pinecone
   class Application < Rails::Application
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -26,6 +27,5 @@ module Pinecone
     # config.i18n.default_locale = :de
 
     # allows bootstrap to play nice with the asset pipeline
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end
