@@ -10,4 +10,18 @@
  *
  *= require_self
  *= require_tree .
+ *= require bootstrap.min.css
+ *= require bootstrap-responsive.min.css
+ *= require font-awesome
+ *= require jquery-ui-1.10.0.custom.min.css
+ *= require cirque.css
+ *= require base-admin-3.css
+ *= require base-admin-3-responsive.css
+ *= require pages/dashboard.css
+ *= require pages/reports.css
+ *= require custom.css
+
+ *
  */
+
+
