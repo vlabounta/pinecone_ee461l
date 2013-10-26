@@ -1,4 +1,6 @@
 Pinecone::Application.routes.draw do
+  get "connect_mailbox/create"
+  get "connect_mailbox/callback"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   root 'static_pages#home'

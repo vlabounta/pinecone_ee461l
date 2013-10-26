@@ -1,6 +1,7 @@
 <% provide(:title, 'Home') %>
-<h1>Pinecone</h1>
-<p><%= @account.messages.where(limit: 5).each do |message| %>
-   <%=   puts message.subject %>
-   <% end %>
-</p>
+<% if signed_in? %>
+  <h1>Your Dash</h1>
+  <% if (@user.context_account_id.nil?) %>
+    <%= link_to "Connect my mailbox", controller: :connect_mailbox, action: :create %>
+  <% end %>
+<% end %>
