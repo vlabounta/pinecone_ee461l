@@ -2,7 +2,8 @@ class ConnectMailboxController < ApplicationController
   before_filter :set_context_handle
 
   def create
-    token = @api.connect_tokens.create("http://localhost:3000/connect_mailbox/callback?user_id=#{current_user.id}")
+    callback = callback_url + "?user_id#{current_user.id}"
+    token = @api.connect_tokens.create(callback)
     redirect_to token.browser_redirect_url
   end
 
