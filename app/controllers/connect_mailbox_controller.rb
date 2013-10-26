@@ -2,21 +2,20 @@ class ConnectMailboxController < ApplicationController
   before_filter :set_context_handle
 
   def create
-    token = @api.connect_tokens.create('http://127.0.0.1:3000/connect_mailbox/callback')
+    token = @api.connect_tokens.create("http://localhost:3000/connect_mailbox/callback?user_id=#{current_user.id}")
     redirect_to token.browser_redirect_url
   end
 
   def callback
     t = @api.connect_tokens[params[:contextio_token]]
     account_id = t.account.id
-    logger.debug "Account_id #{account_id}"
-    current_user = self.current_user
-    logger.debug "cookie #{cookies[:remember_token]}"
-    @current_user.context_account_id = account_id
+    current_user = User.find(params[:user_id])
+    current_user.update_attribute(:context_account_id, account_id)
+    flash[:success] = "Your mailbox has been added"
+    redirect_to root_path
   end
 
   def set_context_handle
     @api = ContextIO.new('s4gvms7r', 'Y1ujJ46crM1jFpdU')
-    @current_user ||= current_user
   end
 end
