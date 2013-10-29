@@ -4,7 +4,9 @@
     <title><%= full_title(yield(:title)) %></title>
 
 
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag params[:controller] %>
+
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
@@ -19,8 +21,11 @@
           <%= content_tag(:div, value, class: "alert alert-#{key}") %>
         <% end %>
         <%= yield %>
-      
-        <%= debug(params) if Rails.env.development? %>  
+        <div class="row">
+        <div class="col-md-12">
+          <%= debug(params) if Rails.env.development? %>  
+        </div>
+        </div>
       </div>
     </div>
     <%= render 'layouts/subfooter' %>

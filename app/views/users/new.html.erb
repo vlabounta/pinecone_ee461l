@@ -1,19 +1,21 @@
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
+<div class="account-container stacked">
 
-<%= form_for(@user) do |f| %>
+  <div class="content clearfix">
+    <h1>Sign Up</h1>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= twitter_bootstrap_form_for @user, layout: :horizontal, role: 'form' do |f| %>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+  <%= f.inputs do %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.label :password_confirmation, "Confirmation" %>
-  <%= f.password_field :password_confirmation %>
-
-  <%= f.submit "Create account", class: "btn btn-large btn-primary" %>
+    <%= f.text_field :name, :placeholder => 'name', div_class: 'col-md-12'%>
+    <%= f.email_field :email, :placeholder => 'you@example.com', div_class: 'col-md-12' %>
+    <%= f.password_field :password, :placeholder => 'password', div_class: 'col-md-12' %>
+    <%= f.password_field :password_confirmation, :placeholder => 'confirm', div_class: 'col-md-12' %>
+  <% end %>
+  <%= f.actions do %>
+  	<%= f.submit "Create account" %>
+  <% end %>
 <% end %>
+</div>
+</div>
