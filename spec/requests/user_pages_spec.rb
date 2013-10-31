@@ -15,7 +15,7 @@ describe "UserPages" do
   describe "signup page" do
     before { visit signup_path }
 
-    it { should have_content('Sign up') }
+    it { should have_content('Sign Up') }
     it { should have_title(full_title('Sign up')) }
   end
 
@@ -35,7 +35,7 @@ describe "UserPages" do
         fill_in "Name",         with: "Eddy"
         fill_in "Email",        with: "eddy@example.com"
         fill_in "Password",     with: "foobar"
-        fill_in "Confirmation", with: "foobar"
+        fill_in "Confirm", with: "foobar"
       end
 
       it "should create a user" do
@@ -78,7 +78,7 @@ describe "UserPages" do
         fill_in "Name",             with: new_name
         fill_in "Email",            with: new_email
         fill_in "Password",         with: user.password
-        fill_in "Confirm Password", with: user.password
+        fill_in "Password Confirmation", with: user.password
         click_button "Save changes"
       end
 

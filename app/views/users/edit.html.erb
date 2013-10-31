@@ -34,10 +34,10 @@
                     <%= f.text_field :name, div_class: 'col-md-12'%>
                     <%= f.email_field :email, :placeholder => 'you@example.com', div_class: 'col-md-12' %>
                     <%= f.password_field :password, div_class: 'col-md-12' %>
-                    <%= f.password_field :password_confirmation, div_class: 'col-md-12' %>
+                    <%= f.password_field :password_confirmation, "Password Confirmation", div_class: 'col-md-12' %>
                   <% end %>
                   <%= f.actions do %>
-                    <%= f.submit "Submit" %>
+                    <%= f.submit "Save changes" %>
                   <% end %>
 
                 <% end %>
@@ -85,7 +85,7 @@
                     </div>
 
                     <div class="form-group">
-                      <label class="col-md-4" for="accountpassword">Password</label>
+                      <label class="col-md-4" for="accountpassword">Account Password</label>
                       <div class="col-md-8">
                         <input type="text" class="form-control" id="accountpassword" value="password">
                       </div>
