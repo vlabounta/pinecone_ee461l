@@ -1,4 +1,6 @@
 Pinecone::Application.routes.draw do
+  get "connect_mailbox/create"
+  get "connect_mailbox/callback", as: :callback
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   root 'static_pages#home'
@@ -6,7 +8,7 @@ Pinecone::Application.routes.draw do
   match '/about',  to: 'static_pages#about', via: 'get'
   match '/signup', to: 'users#new',          via: 'get'
   match '/signin', to: 'sessions#new',       via: 'get'
-  match '/signout', to: 'sessions#destroy',   via: 'delete'
+  match '/signout',to: 'sessions#destroy',   via: 'delete'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
