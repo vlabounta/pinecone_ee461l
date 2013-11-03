@@ -18,9 +18,9 @@ body{ color:#838383; font: 13px/1.7em 'Open Sans';}
 
 
 .account-container {
-	width: 390px; 
+	width: 485px; 
 	display: block;
-	margin: 60px auto 0 auto;
+	margin: 100px auto 0 auto;
 	
 	background: #f9f9f9;
 	
@@ -44,8 +44,23 @@ body{ color:#838383; font: 13px/1.7em 'Open Sans';}
 	
 }
 
+.field-description {
+	padding-top: 8px; 
+	width: 125px;
+	float: left;
+}
+
+.signup-input {
+	float: left;
+	width: 300px;
+}
+
 .login-fields .field {
 	margin-bottom: 1.25em;
+}
+
+.field {
+	height: 30px;
 }
 
 .login-fields label {
@@ -97,7 +112,7 @@ span.login-checkbox {
 }
 
 span.login-checkbox > input[type='checkbox'] {
-    opacity: 0;
+    //opacity: 0;
     float: left;
     width: 15px;
 }
@@ -193,7 +208,10 @@ span.login-checkbox > input[type='checkbox']:checked + label {
 	text-decoration: none;
 }
 
-
+.signup-btn {
+	margin-top: 25px;
+	width: 100%;
+}
 
 
 

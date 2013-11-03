@@ -1,0 +1,88 @@
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	
+	border-bottom: 5px solid black;
+	margin:5px 5px 0 5px;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	
+	border-top: 5px solid black;
+	margin:5px 5px 0 5px;
+	top: 5px;
+}
+
+.add-tab
+{
+	border-left: solid 2px #ddd;
+	border-right: solid 2px #ddd;
+	border-top: 3px solid #ff9900;
+	border-radius: 6px 6px 0 0;
+	font-weight: bold;
+}
+
+.checklist-box
+{
+	float: left;
+	display: inline;
+	padding-top: -2px;
+	width: 25px;
+}
+
+.checklist-delete
+{
+	float: right;
+	padding-right: 15px;
+	display: inline;
+	font-size: 10px;
+	margin-top: -14px;
+}
+
+.checklist-emails
+{
+	margin-left: 30px;
+}
+
+.checklist-add
+{
+	border: 3px dotted gray;
+	border-radius: 8px;
+	margin: 10px 0;
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+	color: black;
+	font-style: bold;
+	font-size: 16px;
+}
+.email-from
+{
+	display: inline;
+	width: 20%;
+	min-width: 200px;
+}
+.email-to
+{
+	display: inline;
+	width: 20%;
+	min-width: 200px;
+}
+.email-subject
+{
+	display: inline;
+	width: 45%;
+	min-width: 450px;
+}
+.email-date
+{
+	display: inline;
+	width: 15%;
+	min-width: 150px;
+}
