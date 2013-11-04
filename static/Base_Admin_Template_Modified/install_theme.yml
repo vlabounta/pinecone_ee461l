@@ -1,8 +1,0 @@
----
-content_path: .
-partials: {}
-index_path: index.html
-stylesheet_dir: css
-image_dir: css/ui-lightness/images
-javascript_dir: js
-no_sass: false

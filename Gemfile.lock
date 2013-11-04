@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
-  revision: 0e88056ac5d58fb0bbd23d3fe929eac01712d964
+  revision: 9c6c07f74ff515cf38380b014cfede14a4f0eae4
   branch: 3
   specs:
     bootstrap-sass (3.0.0.0)
@@ -119,6 +119,8 @@ GEM
     multi_json (1.8.2)
     multi_test (0.0.2)
     nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
+    nokogiri (1.6.0-x86-mingw32)
       mini_portile (~> 0.5.0)
     oauth (0.4.7)
     pg (0.15.1)
