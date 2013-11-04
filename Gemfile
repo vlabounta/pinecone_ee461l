@@ -3,13 +3,15 @@ ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.0'
-gem 'bootstrap-sass', '2.3.2.0'
+gem 'bootstrap-sass', :git => 'git://github.com/thomas-mcdonald/bootstrap-sass.git', :branch => '3'
+gem 'twitter_bootstrap_form_for', :git => 'https://github.com/stouset/twitter_bootstrap_form_for.git'
 gem "font-awesome-rails"
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 gem 'pg', '0.15.1'
+gem 'contextio'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'

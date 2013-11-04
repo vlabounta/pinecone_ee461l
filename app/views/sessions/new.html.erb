@@ -1,13 +1,18 @@
-<% provide(:title, "Sign in") %>
-<h1>Sign in</h1>
+<% provide(:title, "Sign In") %>
+<div class="account-container stacked">
 
-<%= form_for(:session, url: sessions_path) do |f| %>
+  <div class="content clearfix">
+    <h1>Sign In</h1>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+<%= twitter_bootstrap_form_for :session, url: sessions_path, layout: :horizontal, role: 'form' do |f| %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+  <%= f.inputs do %>
+    <%= f.email_field :email, :placeholder => 'you@example.com'%>
+    <%= f.password_field :password, :placeholder => 'password' %>
+  <% end %>
+  <%= f.actions do %>
+  	<%= f.submit "Sign In" %>
+  <% end %>
 <% end %>
+</div>
+</div>

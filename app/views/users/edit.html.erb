@@ -14,8 +14,6 @@
         
         <div class="widget-content">
           
-          
-          
           <div class="tabbable">
           <ul class="nav nav-tabs">
             <li class="active">
@@ -28,58 +26,22 @@
           
             <div class="tab-content">
               <div class="tab-pane active" id="profile">
-              <form id="edit-profile" class="form-horizontal col-md-8">
-                <%= form_for(@user) do |f| %>
+           
+                <%= twitter_bootstrap_form_for @user, layout: :horizontal, role: 'form' do |f| %>
                   <%= render 'shared/error_messages', object: f.object %>
-                <fieldset>
+                  <%= f.inputs do %>
 
-                  <div class="form-group">
-                    <%= f.label :name, :class => "col-md-4" %>
-                    <div class="col-md-8">
-                      <%= f.text_field :name, :class => "form-control" %>
-                    </div> <!-- /controls -->       
-                  </div> <!-- /control-group -->
+                    <%= f.text_field :name, div_class: 'col-md-12'%>
+                    <%= f.email_field :email, :placeholder => 'you@example.com', div_class: 'col-md-12' %>
+                    <%= f.password_field :password, div_class: 'col-md-12' %>
+                    <%= f.password_field :password_confirmation, "Password Confirmation", div_class: 'col-md-12' %>
+                  <% end %>
+                  <%= f.actions do %>
+                    <%= f.submit "Save changes" %>
+                  <% end %>
 
-                  <div class="form-group">
-                    <%= f.label :email, :class => "col-md-4" %>
-                    <div class="col-md-8">
-                      <%= f.text_field :email, :class => "form-control" %>
-                    </div> <!-- /controls -->       
-                  </div> <!-- /control-group -->
-                  
-                                 
-                  
-                  <hr /><br />
-
-                  <div class="form-group">
-                    <%= f.label :password, :class => "col-md-4" %>
-                    <div class="col-md-8">
-                      <%= f.text_field :password, :class => "form-control" %>
-                    </div> <!-- /controls -->       
-                  </div> <!-- /control-group -->
-
-                  <div class="form-group">
-                    <%= f.label :password_confirmation, :class => "col-md-4" %>
-                    <div class="col-md-8">
-                      <%= f.text_field :password_confirmation, :class => "form-control" %>
-                    </div> <!-- /controls -->       
-                  </div> <!-- /control-group -->
-                                  
-                  
-                    
-                    <br />
-                  
-                    
-                  <div class="form-group">
-
-                    <div class="col-md-offset-4 col-md-8">
-                      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %> 
-                      <button class="btn btn-default">Cancel</button>
-                    </div>
-                  </div> <!-- /form-actions -->
-                </fieldset>
                 <% end %>
-              </form>
+            
               </div>
               
               <div class="tab-pane" id="settings">
@@ -123,7 +85,7 @@
                     </div>
 
                     <div class="form-group">
-                      <label class="col-md-4" for="accountpassword">Password</label>
+                      <label class="col-md-4" for="accountpassword">Account Password</label>
                       <div class="col-md-8">
                         <input type="text" class="form-control" id="accountpassword" value="password">
                       </div>

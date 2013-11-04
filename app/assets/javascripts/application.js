@@ -13,6 +13,7 @@
 //= require turbolinks
 //= require jquery-1.9.1.min
 //= require jquery-ui-1.10.0.custom.min
+//= require jquery_ujs
 //= require bootstrap.min
 //= require jquery.flot
 //= require Application
