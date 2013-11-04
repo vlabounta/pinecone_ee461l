@@ -9,16 +9,9 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require bootstrap.min.css
- *= require bootstrap-responsive.min.css
  *= require font-awesome
- *= require jquery-ui-1.10.0.custom.min.css
- *= require cirque.css
- *= require base-admin-3.css
- *= require base-admin-3-responsive.css
- *= require pages/dashboard.css
- *= require pages/reports.css
- *
+ *= require nvd3/nv.d3.css
+ *= require app.css
  */
 
 

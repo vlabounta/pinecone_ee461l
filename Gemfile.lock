@@ -5,14 +5,6 @@ GIT
     database_cleaner (1.2.0)
 
 GIT
-  remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
-  revision: 9c6c07f74ff515cf38380b014cfede14a4f0eae4
-  branch: 3
-  specs:
-    bootstrap-sass (3.0.0.0)
-      sass (~> 3.2)
-
-GIT
   remote: https://github.com/stouset/twitter_bootstrap_form_for.git
   revision: 830dbfd439ebb1194e1ae025100fc0e790be37cf
   specs:
@@ -208,7 +200,6 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
-  bootstrap-sass!
   bootstrap-will_paginate (= 0.0.9)
   capybara (= 2.1.0)
   coffee-rails (= 4.0.0)

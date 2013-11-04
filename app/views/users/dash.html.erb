@@ -1,0 +1,19 @@
+<% provide(:title, @user.name) %>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="page-title">Dashboard <small>Statistics and more</small></h2>
+    </div>
+</div>
+<div class="row">
+	<div class="col-md-8">
+		<%= render 'users/dash/pageviews' %>
+		<%= render 'users/dash/table' %>
+		<%= render 'users/dash/chat' %>
+	</div>
+	<div class="col-md-4">
+		<%= render 'users/dash/feed' %>
+		<%= render 'users/dash/tabs' %>
+		<%= render 'users/dash/bargraphs' %>
+	</div>
+</div>

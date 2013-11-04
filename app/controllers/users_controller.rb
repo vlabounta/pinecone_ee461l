@@ -7,6 +7,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def dash
+    @user = User.find(params[:id])
+    render 'dash'
+  end
+
   def new
     @user = User.new
   end

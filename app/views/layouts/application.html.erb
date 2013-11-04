@@ -7,28 +7,35 @@
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= stylesheet_link_tag params[:controller] %>
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
   </head>
-  <body>
-    <%= render 'layouts/header' %>
-    <%= render 'layouts/nav' %> <!-- Should not appear everywhere -->
-    <div class="main">
-      <div class="container">
+
+  <!-- body -->
+  <body class="background-dark">
+  <!-- top left logo -->
+  <div class="logo">
+      <h4><%= link_to "Pinecone", root_path, id: "logo" %></h4>
+  </div>
+
+  <%= render 'layouts/sidebar' %>
+  <%= render 'layouts/header' %>
+  <div class="wrap">      
+      <div class="content container">
+
         <% flash.each do |key, value| %>
           <%= content_tag(:div, value, class: "alert alert-#{key}") %>
         <% end %>
         <%= yield %>
         <div class="row">
-        <div class="col-md-12">
-          <%= debug(params) if Rails.env.development? %>  
+          <div class="col-md-12">
+            <%= debug(params) if Rails.env.development? %>  
+          </div>
         </div>
-        </div>
+
       </div>
-    </div>
-    <%= render 'layouts/subfooter' %>
-    <%= render 'layouts/footer' %>
+  </div>
+
   </body>
 </html>
