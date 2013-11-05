@@ -22,8 +22,7 @@ class ContextClient
   def most_recent_messages(limit = 5)
     unless self.account_id.nil?
       account = self.api_handle.accounts[self.account_id]
-      Rails.logger.debug "account object: #{account}"
-      @messages = account.messages.where(limit: 5)
+      @messages = account.messages.where(limit: limit)
     end
   end
  
