@@ -1,0 +1,7 @@
+<% client = ContextClient.new(current_user.context_account_id) %>
+<% messages = client.most_recent_messages(5) %>
+<ul>
+  <% messages.each do |message| %>
+    <li><%= message.addresses['from']['name'] %>: <%= message.subject %>, <%= message.date %></li>
+  <% end %>
+<ul>

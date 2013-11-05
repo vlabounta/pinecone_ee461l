@@ -1,7 +1,5 @@
 <% api = ContextIO.new('s4gvms7r', 'Y1ujJ46crM1jFpdU') %>
 <% account = api.accounts[current_user.context_account_id] %>
-<% handle = ContextClient.new(current_user.context_account_id) %>
-<% messages = handle.most_recent_messages(6) %>
 <h3>Last five email subjects</h3>
 <ul>
 <% account.messages.where(limit: 5).each do |message| %>
@@ -9,8 +7,4 @@
 <% end %>
 </ul>
 
-<ul>
-<% messages.each do |message| %>
-  <li><%= message.subject %></li>
-<% end %>
-</ul>
+<%= render 'users/most_recent_messages' %>
