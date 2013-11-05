@@ -18,11 +18,16 @@ class ContextClient
   def persisted?
     false
   end
- 
-  def most_recent_messages(limit = 5)
-    unless self.account_id.nil?
-      account = self.api_handle.accounts[self.account_id]
-      @messages = account.messages.where(limit: limit)
+
+  # ARGs: options hash - :limit, :from, :to
+  def most_recent_messages(options = {})
+    options[:limit] = 5 if options[:limit].nil?
+    hash = {"limit"=>options[:limit],
+        "from"=> options[:from], "to"=>options[:to]}
+    
+    unless account_id.nil?
+      account = api_handle.accounts[account_id]
+      @messages = account.messages.where(hash)
     end
   end
  
