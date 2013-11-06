@@ -19,7 +19,9 @@ class ContextClient
     false
   end
 
-  # ARGs: options hash - :limit, :from, :to
+  # Displays the most recent messages according to specific constraints
+  # Params:
+  # +options+:: a hash containing where constraints to be used when querying CIO
   def most_recent_messages(options = {})
     options[:limit] = 5 if options[:limit].nil?
     hash = {"limit"=>options[:limit],
@@ -30,5 +32,17 @@ class ContextClient
       @messages = account.messages.where(hash)
     end
   end
- 
+
+  # Extracts links from text
+  # Params:
+  # +content+:: text containing urls to be parsed
+  def extract_links(content)
+    regex = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/
+    first_pass = content.scan(regex)
+    urls = []
+    first_pass.each do |url_array|
+      urls << url_array.first
+    end
+    urls
+  end
 end
