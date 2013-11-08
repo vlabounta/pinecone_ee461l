@@ -31,10 +31,10 @@
                   <%= render 'shared/error_messages', object: f.object %>
                   <%= f.inputs do %>
 
-                    <%= f.text_field :name, div_class: 'col-md-12'%>
-                    <%= f.email_field :email, :placeholder => 'you@example.com', div_class: 'col-md-12' %>
-                    <%= f.password_field :password, div_class: 'col-md-12' %>
-                    <%= f.password_field :password_confirmation, "Password Confirmation", div_class: 'col-md-12' %>
+                    <%= f.text_field :name, div_class: 'col-xs-12 parsley-validated'%>
+                    <%= f.email_field :email, :placeholder => 'you@example.com', div_class: 'col-xs-12 parsley-validated' %>
+                    <%= f.password_field :password, div_class: 'col-xs-12 parsley-validated' %>
+                    <%= f.password_field :password_confirmation, "Password Confirmation", div_class: 'col-xs-12 parsley-validated' %>
                   <% end %>
                   <%= f.actions do %>
                     <%= f.submit "Save changes" %>
@@ -45,80 +45,76 @@
               </div>
               
               <div class="tab-pane" id="settings">
-                <form id="edit-profile2" class="form-horizontal col-md-8">
+                <form id="user-form" class="form-horizontal label-left" novalidate="novalidate" method="post" data-validate="parsley">
                   <fieldset>
-                    
-                    
-                    <div class="form-group">
-                      <label class="col-md-4" for="accounttype">Account Type</label>
-                      <div class="col-md-8">
+                    <div class="control-group">
+                      <label class="control-label" for="accounttype">Account Type</label>
+                      <div class="controls form-group">
                         <div class="radio">
-                          <label>
-                            <input type="radio" name="accounttype" value="option1" checked="checked" id="accounttype">
-                            POP3
-                          </label>
+                          <label class="radio">
+                                        <div class="iradio_square-grey checked" style="position: relative;"><input type="radio" id="radio-4" class="iCheck" name="can" checked="checked" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255); border: 0px; opacity: 0; background-position: initial initial; background-repeat: initial initial;"></ins></div>
+                                        POP3</label>
                         </div>
 
                         <div class="radio">
-                          <label>
-                            <input type="radio" name="accounttype" value="option2">
-                            IMAP
-                          </label>
+                          <label class="radio">
+                                        <div class="iradio_square-grey" style="position: relative;"><input type="radio" name="can" class="iCheck" id="radio-5" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255); border: 0px; opacity: 0; background-position: initial initial; background-repeat: initial initial;"></ins></div>
+                                        IMAP</label>
                         </div>
 
                       </div>
                     </div>
 
-                    <div class="form-group">
-                      <label class="col-md-4" for="accountusername">Account Username</label>
-                      <div class="col-md-8">
-                        <input type="text" class="form-control" id="accountusername" value="rod.howard@example.com">
+                    <div class="control-group">
+                      <label class="control-label" for="accountusername">Account Username</label>
+                      <div class="controls form-group">
+                        <input type="text" class="col-xs-12 parsley-validated" id="accountusername" name="accountusername" value="rod.howard@example.com">
                         <p class="help-block">Leave blank to use your profile email address.</p>
                       </div>
                     </div>
 
-                    <div class="form-group">
-                      <label class="col-md-4" for="emailserver">Email Server</label>
-                      <div class="col-md-8">
-                        <input type="text" class="form-control" id="emailserver" value="mail.example.com">
+                    <div class="control-group">
+                      <label class="control-label" for="emailserver">Email Server</label>
+                      <div class="controls form-group">
+                        <input type="text" class="col-xs-12 parsley-validated" id="emailserver" name="emailserver" value="mail.example.com">
                       </div>
                     </div>
 
-                    <div class="form-group">
-                      <label class="col-md-4" for="accountpassword">Account Password</label>
-                      <div class="col-md-8">
-                        <input type="text" class="form-control" id="accountpassword" value="password">
+                    <div class="control-group">
+                      <label class="control-label" for="accountpassword">Account Password</label>
+                      <div class="controls form-group">
+                        <input type="text" class="col-xs-12 parsley-validated" id="accountpassword" name="emailserver" value="password">
                       </div>
                     </div>
                     
                                           
                     
                     
-                    <div class="form-group">
-                      <label class="col-md-4" for="accountadvanced">Advanced Settings</label>
+                    <div class="control-group">
+                      <label class="control-label" for="accountadvanced">Advanced Settings</label>
 
-                      <div class="col-md-8">
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox" name="accountadvanced" value="option1" checked="checked" id="accountadvanced">
+                        <div class="controls form-group">
+                          <label class="checkbox">
+                            <div class="icheckbox_square-grey" style="position: relative;"><input type="checkbox" id="checkbox-2" class="iCheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255); border: 0px; opacity: 0; background-position: initial initial; background-repeat: initial initial;"></ins></div>
                             User encrypted connection when accessing this server
                           </label>
                         </div>
 
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox" name="accounttype" value="option2">
+                        <div class="controls form-group">
+                          <label class="checkbox">
+                           <div class="icheckbox_square-grey" style="position: relative;"><input type="checkbox" id="checkbox-2" class="iCheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255); border: 0px; opacity: 0; background-position: initial initial; background-repeat: initial initial;"></ins></div>
                             Download all message on connection
                           </label>
                         </div>
                       </div>
-                    </div>
+                    
 
                     
-                    <div class="form-group">
-                      <div class="col-md-offset-4 col-md-8">
-                        <button type="submit" class="btn btn-primary">Save</button> <button class="btn btn-default">Cancel</button>
-                      </div>
+                    <div class="form-action">
+                      
+                      <button type="submit" class="btn btn-primary">Save</button> 
+                      <button type="button" class="btn btn-default">Cancel</button>
+                      
                     </div>
                   </fieldset>
                 </form>
