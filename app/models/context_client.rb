@@ -34,6 +34,15 @@ class ContextClient
     end
   end
 
+  # Gets file attachments 
+  # Params:
+  # +options+:: a hash of options containing where constraints to be used when querying CIO
+  def get_attachments(options = {})
+    options[:limit] ||= 5
+    account = api_handle.accounts[account_id]
+    files = account.files.where(from: options[:from], limit: options[:limit])
+  end
+
   # Extracts links from text
   # Params:
   # +content+:: text containing urls to be parsed
