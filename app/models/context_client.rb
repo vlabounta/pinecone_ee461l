@@ -11,6 +11,7 @@ class ContextClient
     if account_id.nil?
       send(:account_id=, account_id) 
     else
+      # fix this
       send(:account_id=, account_id)
     end
   end
