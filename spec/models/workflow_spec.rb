@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Workflow do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject { @workflow }
+
+  it { should respond_to(:tasks) }
+  
 end
