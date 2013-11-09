@@ -1,18 +1,26 @@
 <% provide(:title, "Sign In") %>
-<div class="account-container stacked">
 
-  <div class="content clearfix">
-    <h1>Sign In</h1>
 
-<%= twitter_bootstrap_form_for :session, url: sessions_path, layout: :horizontal, role: 'form' do |f| %>
+<div class="single-widget-container">
+    <section class="widget login-widget">
+        <header class="text-align-center">
+            <h4>Sign in</h4>
+        </header>
+        <div class="body">
+         <%= twitter_bootstrap_form_for :session, url: sessions_path, :class => 'no-margin', role: 'form' do |f| %>
 
-  <%= f.inputs do %>
-    <%= f.email_field :email, :placeholder => 'you@example.com'%>
-    <%= f.password_field :password, :placeholder => 'password' %>
-  <% end %>
-  <%= f.actions do %>
-  	<%= f.submit "Sign In" %>
-  <% end %>
-<% end %>
-</div>
+              <%= f.inputs do %>
+
+                <%= f.email_field :email, :placeholder => 'Your Email' %>
+                <%= f.password_field :password, :placeholder => 'Password' %>
+                
+              <% end %>
+              <%= f.actions do %>
+                <%= f.submit "Sign in", :class => 'btn btn-block btn-lg btn-danger' %>
+              <% end %>
+            <% end %>
+
+        </div>
+
+    </section>
 </div>

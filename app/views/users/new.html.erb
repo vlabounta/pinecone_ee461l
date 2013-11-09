@@ -1,34 +1,31 @@
 <% provide(:title, 'Sign up') %>
-<div class="account-container stacked">
 
-  <div class="content clearfix">
-    <h1>Sign Up</h1>
 
-  <%= twitter_bootstrap_form_for @user, layout: :horizontal, role: 'form' do |f| %>
-
-  <%= f.inputs do %>
-
-    <%= f.text_field :name, :placeholder => 'name', div_class: 'col-md-12'%>
-    <%= f.email_field :email, :placeholder => 'you@example.com', div_class: 'col-md-12' %>
-    <%= f.password_field :password, :placeholder => 'Password', div_class: 'col-md-12' %>
-    <%= f.password_field :password_confirmation, :placeholder => 'Confirm', div_class: 'col-md-12' %>
-  <% end %>
-  <%= f.actions do %>
-  	<%= f.submit "Create account" %>
-  <% end %>
-<% end %>
-</div>
-</div>
-
-<body class="background-dark" style="zoom: 1;">
 <div class="single-widget-container">
     <section class="widget login-widget">
         <header class="text-align-center">
-            <h4>Login to your account</h4>
+            <h4>Signup for an account</h4>
         </header>
         <div class="body">
-            <form class="no-margin"
-                  action="index.html" method="get">
+         <%= twitter_bootstrap_form_for @user, :class => 'no-margin', role: 'form' do |f| %>
+
+              <%= f.inputs do %>
+
+                <%= f.text_field :name, :placeholder => 'Your Name'%>
+                <%= f.email_field :email, :placeholder => 'Your Email' %>
+                <%= f.password_field :password, :placeholder => 'Password' %>
+                <%= f.password_field :password_confirmation, :placeholder => 'Confirm Password' %>
+                
+              <% end %>
+              <%= f.actions do %>
+                <%= f.submit "Create account", :class => 'btn btn-block btn-lg btn-danger' %>
+              <% end %>
+            <% end %>
+
+        </div>
+
+            <!--
+            <form class="no-margin" action="index.html" method="get">
                 <fieldset>
                     <div class="form-group no-margin">
                         <label for="email" >Email</label>
@@ -70,7 +67,8 @@
                 <a href="index.html"><span><i class="icon-facebook-sign icon-large"></i> LogIn with Facebook</span></a>
             </div>
         </footer>
+        -->
     </section>
 </div>
-</body>
+
 

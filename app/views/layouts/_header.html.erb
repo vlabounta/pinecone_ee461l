@@ -199,7 +199,11 @@
                             <i class="icon-reorder"></i>
                         </a>
                     </li>
-                    <li class="hidden-xs"><a href="login.html"><i class="icon-signout"></i></a></li>
+                    <li class="hidden-xs">
+                        <%= link_to signout_path, method: 'delete' do %>
+                            <i class="icon-signout"></i>
+                        <% end %>
+                    </li>
                 </ul>
                 <form id="search-form" class="navbar-form pull-right" role="search">
                     <input type="search" class="search-query" placeholder="Search...">
