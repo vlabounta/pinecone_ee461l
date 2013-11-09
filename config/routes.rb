@@ -1,4 +1,8 @@
 Pinecone::Application.routes.draw do
+  get "workflow/new"
+  get "workflow/create"
+  get "workflow/destroy"
+  get "workflow/update"
   get "connect_mailbox/create"
   get "connect_mailbox/callback", as: :callback
   get "users/:id/dash" => "users#dash"
