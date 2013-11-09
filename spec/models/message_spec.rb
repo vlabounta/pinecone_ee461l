@@ -6,7 +6,7 @@ describe Message do
   let(:workflow) { FactoryGirl.create(:workflow, :user => user) }
   let(:task) { FactoryGirl.create(:task, :workflow => workflow) }
   before do
-    @message = task.build
+    @message = task.messages.build
   end
 
   subject { @message }

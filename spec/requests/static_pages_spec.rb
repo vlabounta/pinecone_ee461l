@@ -11,10 +11,9 @@ describe "StaticPages" do
 
   describe "Home page" do
     before { visit root_path }
-    let(:heading)  { 'Your Dash' }
-    let(:title)    { 'Home' }
-
-    it_should_behave_like "all static pages"
+#    let(:title)    { 'Home' }
+#
+#    it_should_behave_like "all static pages"
   end
 
   describe "Help page" do
