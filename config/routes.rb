@@ -1,4 +1,9 @@
 Pinecone::Application.routes.draw do
+  get "task/index"
+  get "task/new"
+  get "task/create"
+  get "task/update"
+  get "task/destroy"
   get "workflow/new"
   get "workflow/create"
   get "workflow/destroy"
