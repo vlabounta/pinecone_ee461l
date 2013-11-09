@@ -14709,7 +14709,6 @@ input.parsley-error {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  border-top: 1px solid rgba(51, 51, 51, 0.25);
   padding: 12px;
   margin: 0 -12px;
   cursor: pointer;

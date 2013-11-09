@@ -15,6 +15,8 @@ var $lime = "#8CBF26",
     $white = "#fff",
     $textColor = $gray;
 
+    
+
 //turn off charts is needed
 var chartsOff = false;
 if (chartsOff){
