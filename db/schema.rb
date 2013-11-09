@@ -11,12 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131108162204) do
+ActiveRecord::Schema.define(version: 20131109183227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "context_clients", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", force: true do |t|
+    t.string   "message_id"
+    t.text     "content"
+    t.string   "from"
+    t.text     "to"
+    t.integer  "task_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
