@@ -12,7 +12,7 @@
             <div class="body">
                 <div id="wizard" class="form-wizard">
                     <ul class="wizard-navigation nav-justified">
-                        <li><a href="#tab1" data-toggle="tab"><small>1.</small><strong> Info</strong></a></li>
+                        <li><a href="#tab1" data-toggle="tab"><small>1.</small> <strong>Info</strong></a></li>
                         <li><a href="#tab2" data-toggle="tab"><small>2.</small> <strong>Tasks</strong></a></li>
                         <li><a href="#tab3" data-toggle="tab"><small>3.</small> <strong>Review</strong></a></li>
                     </ul>
@@ -25,59 +25,25 @@
 
                         	<%= f.inputs do %>
                         		<%= f.text_field :title, :placeholder => 'Title' %>
-                        		<%= f.text_field :description, :placeholder => 'Description' %>
-
-                        	<% end %>
-
-                        	<%= f.actions do %>
-                        		<%= f.submit "Create Workflow" %>
-                        	<% end %>
-                        <% end %>
+                                <%= f.text_field :description, :placeholder => 'Description' %>
+                                <%= f.text_field :tags, :placeholder => 'Tag, Tag, ...' %> 
+                                <%= f.email :goon_email, :placeholder => 'Goon' %>   
                         
-                            <form class="form-horizontal form-condensed" action='' method="POST">
-                                <fieldset>
-                                    <div class="control-group">
-                                        <!-- Title -->
-                                        <label class="control-label"  for="title">Title</label>
-                                        <div class="controls form-group">
-                                            <div class="col-md-10">
-                                                <input type="text" id="title" name="title" placeholder="" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <!-- Description -->
-                                        <label class="control-label"  for="description">Description</label>
-                                        <div class="controls form-group">
-                                            <div class="col-md-10">
-                                                <input type="text" id="description" name="description"
-                                                                          placeholder="" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <!-- Tags -->
-                                        <label class="control-label"  for="tags">Tags</label>
-                                        <div class="controls form-group">
-                                            <div class="col-md-10">
-                                                <input type="text" id="tags" name="tags" placeholder="" class="form-control">
-                                                <span class="help-block">Tags are used to filter emails relevant to this workflow</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <!-- Creator -->
-                                        <label class="control-label"  for="creator">Creator</label>
-                                        <div class="controls form-group">
-                                            <div class="col-md-10">
-                                                <input type="text" id="creator" name="creator" placeholder="" class="form-control" disabled="disabled">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </form>
+
                         </div>
                         <div class="tab-pane" id="tab2">
+                                <%= f.text_field :task, :placeholder => 'Task' %>
+                        </div>
+                        <div class="tab-pane" id="tab3">
+                                
+                        </div>
+
+                            <% end %>
+
+                            <%= f.actions do %>
+                                <%= f.submit "Create Workflow" %>
+                            <% end %>
+                        <% end %>
                             <form class="form-horizontal form-condensed" action='' method="POST">
                                 <fieldset>
                                 	<div class="control-group">
