@@ -1,4 +1,4 @@
-class WorkflowController < ApplicationController
+class WorkflowsController < ApplicationController
   def new
     @workflow = Workflow.new
   end
