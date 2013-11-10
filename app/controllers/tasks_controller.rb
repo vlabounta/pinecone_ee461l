@@ -1,4 +1,4 @@
-class TaskController < ApplicationController
+class TasksController < ApplicationController
   def index
     @tasks = Task.order('title').finder(params[:q]).page(params[:page]).per(params[:per])
     respond_to do |format|

@@ -1,20 +1,11 @@
 Pinecone::Application.routes.draw do
-#  get "task/index"
-#  get "task/new"
-#  get "task/create"
-#  get "task/update"
-#  get "task/destroy"
-#  get "workflow/new"
-#  get "workflow/create"
-#  get "workflow/destroy"
-#  get "workflow/update"
+  root 'static_pages#home'
   get "connect_mailbox/create"
   get "connect_mailbox/callback", as: :callback
   resources :users
   resources :sessions,  only: [:new, :create, :destroy]
-  resources :workflow, only: [:new, :create, :update, :destroy]
-  resources :task,     only: [:index, :new, :create, :update, :destroy]
-  root 'static_pages#home'
+  resources :workflows, only: [:new, :create, :update, :destroy]
+  resources :tasks,     only: [:index, :new, :create, :update, :destroy]
   match '/help',   to: 'static_pages#help',  via: 'get'
   match '/about',  to: 'static_pages#about', via: 'get'
   match '/signup', to: 'users#new',          via: 'get'
