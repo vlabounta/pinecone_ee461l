@@ -5,6 +5,7 @@ class WorkflowController < ApplicationController
 
   def create
     @workflow = current_user.workflows.build(workflow_params)
+    @workflow.author_id = current_user.id
     if @workflow.save
       flash[:success] = "#{@workflow.title} workflow successfully created!"
       redirect_to root_url
@@ -25,6 +26,6 @@ class WorkflowController < ApplicationController
   private
 
     def workflow_params
-      params.require(:workflow).permit(:author_id, :title, :description)
+      params.require(:workflow).permit(:title, :description)
     end
 end
