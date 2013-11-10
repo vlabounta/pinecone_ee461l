@@ -4,7 +4,7 @@ class WorkflowController < ApplicationController
   end
 
   def create
-    @workflow = Workflow.new(workflow_params)
+    @workflow = current_user.workflows.build(workflow_params)
     if @workflow.save
       flash[:success] = "#{@workflow.title} workflow successfully created!"
       redirect_to root_url
