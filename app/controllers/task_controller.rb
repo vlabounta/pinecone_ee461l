@@ -17,5 +17,14 @@ class TaskController < ApplicationController
   end
 
   def destroy
+    @task.destroy
+    flash[:success] = "Task deleted"
+    redirect_to root_url
   end
+
+  private
+
+    def task_params
+      params.require(:task).permit(:title, :description)
+    end
 end

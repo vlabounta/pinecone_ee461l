@@ -4,7 +4,8 @@ class WorkflowController < ApplicationController
   end
 
   def create
-    @workflow = Workflow.new(workflow_params)
+    @workflow = current_user.workflows.build(workflow_params)
+    @workflow.author_id = current_user.id
     if @workflow.save
       flash[:success] = "#{@workflow.title} workflow successfully created!"
       redirect_to root_url
@@ -14,7 +15,7 @@ class WorkflowController < ApplicationController
   end
 
   def destroy
-    Workflow.find(params[:id]).destroy
+    @workflow.destroy
     flash[:success] = "Workflow deleted"
     redirect_to root_path
   end
@@ -25,6 +26,6 @@ class WorkflowController < ApplicationController
   private
 
     def workflow_params
-      params.require(:workflow).permit(:author_id, :title, :description)
+      params.require(:workflow).permit(:title, :description)
     end
 end

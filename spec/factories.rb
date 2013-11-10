@@ -10,6 +10,11 @@ FactoryGirl.define do
     end
   end
 
+  factory :new_hire do
+    name        "Little Timmy"
+    email       "tim@hotmail.com"
+  end
+
   factory :workflow do
     title       "Legal documentation"
     description "Sign all forms"
