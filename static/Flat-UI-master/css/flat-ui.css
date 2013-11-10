@@ -2085,7 +2085,7 @@ fieldset[disabled] .form-control + .input-icon,
 .dropdown-menu li.selected > a,
 .dropdown-menu li.active > a.highlighted,
 .dropdown-menu li.selected > a.highlighted {
-  background: #1abc9c;
+  background: #a1a6a9;
   color: #ffffff;
 }
 .dropdown-menu li.active > a:hover,

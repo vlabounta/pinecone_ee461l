@@ -97,5 +97,24 @@ var Application = function () {
 	    
 	    return custom;
 	}
+
+	function addWorkflow () {
+		var workflows = $('#myTab');
+
+		var data = document.createElement('li');
+		var tab = document.createElement('a');
+		tab.setAttribute("data-toggle", "tab");
+
+		tab.addTextNode("new workflow");
+
+		data.appendChild(tab);
+		workflows.appendChild(data);
+
+		var contents = $('.tab-content')[0];
+
+		var pane = document.createElement('div');
+		pane.setAttribute("class", "tab-pane fade");
+		pane.setAttribute("id", "");
+	}
 	
 }();

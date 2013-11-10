@@ -1,4 +1,70 @@
+//-----------------General classes----------------------//
+.top-menu
+{
+	background-color: #bdc3c7;
+	width: 100%;
+	padding: 0px 20px;
+	height: 41px;
+}
+#search-bar
+{
+	float: left;
+	width: 30%;
+	min-width: 75px;
+	margin-top: 5px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.header-right
+{
+	float: right;
+	margin: 0px 10px 0px 20px;
+}
+.user-options
+{
+	display: inline;
+	width: 150px; !important
+	padding: 5px 5px 5px 15px; 
+	margin: 0px 20px;
+}
+.options-dropdown
+{
+	float: right;
+	width: 150px;
+	margin-right: 50px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+.footer
+{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	padding: 20px 40px;
+	background-color: #bdc3c7;
+	margin-top: -130px;
+	color: white;
+}
+.about-footer
+{
+	color: white;
+}
+.contact-footer
+{
+	float: right;
+	color: white;
+}
+.block
+{
+	display: block;
+}
+.margin-top15
+{
+	margin-top: 15px;
+}
 
+
+//-----------------Sign In----------------------//
 .login-container
 {
 	margin: 0px auto;
@@ -23,6 +89,12 @@
 {
 	float: left;
 }
+.metaLinks
+{
+	width: 200px;
+	float: right;
+	height: 50px;
+}
 .login-metaLink
 {
 	text-align: right;
@@ -32,34 +104,21 @@
 {
 	margin-top: 15px;
 }
-.footer
+
+//-----------------Sign Up----------------------//
+
+.signup-container
 {
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-	padding: 20px 40px;
-	background-color: #bdc3c7;
-	margin-top: -130px;
-	color: white;
-}
-.about-footer
-{
-	color: white;
-}
-.contact-footer
-{
-	float: right;
-	color: white;
+	margin: 0px auto;
+	margin-top: 130px;
+	width: 600px;
 }
 
 
-.top-menu
-{
-	background-color: #bdc3c7;
-	width: 100%;
-	padding: 0px 20px;
-	height: 41px;
-}
+
+//-----------------Profile----------------------//
+
+
 .pinecone-image
 {
 	background: url(../images/pinecone_image.png) 0 0 no-repeat;
@@ -69,44 +128,17 @@
 	float: left;
 	margin: 0px 5px 0px 5px;
 }
-#search-bar
-{
-	float: left;
-	width: 30%;
-	min-width: 75px;
-	margin-top: 5px;
-	padding-top: 0px;
-	padding-bottom: 0px;
-}
-.header-right
-{
-	float: right;
-	margin: 0px 10px 0px 20px;
-}
 .user-name
 {
 	font-size: 20px;
 	margin-top: 10px;
 	float: left;
 }
-.user-options
-{
-	display: inline;
-	width: 150px; !important
-	padding: 5px 5px 5px 15px; 
-	margin: 0px 20px;
-}
-.options-dropdown
-{
-	float: right;
-	width: 150px;
-	margin-right: 50px;
-	padding-bottom: 0px;
-	padding-top: 0px;
-}
+
 .profile-container
 {
-	margin-top: 50px
+	margin-top: 50px;
+	height: 200px;
 }
 .profile-picture
 {
@@ -115,8 +147,12 @@
 	height: 200px;
 	width: 300px;
 	float: left;
-	margin: 0px 20px 0px 50px;
+	margin: 0px 20px 0px 0px;
 	border-radius: 16px;
+}
+.profile-extraneous
+{
+	margin-left: 50px;
 }
 .relevant-docs
 {
@@ -125,6 +161,7 @@
 	width: 225px;
 	height: 550px;
 	float: left;
+	margin-right: 50px;
 }
 .docs-header
 {
@@ -162,7 +199,7 @@
 }
 .personal-info
 {
-	//margin: 50px 0px;
+	margin-bottom: 30px;
 }
 .profile-name
 {
@@ -199,12 +236,10 @@
 {
 	margin: 0px auto;
 }
-.block
+.extraneous-info
 {
-	display: block;
+	font-size: 18px;
 }
-.margin-top15
-{
-	margin-top: 15px;
-}
+
+
 
