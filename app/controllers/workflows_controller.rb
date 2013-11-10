@@ -26,6 +26,6 @@ class WorkflowsController < ApplicationController
   private
 
     def workflow_params
-      params.require(:workflow).permit(:title, :description)
+      params.require(:workflow).permit(:title, :description, :tags, :goon_email)
     end
 end
