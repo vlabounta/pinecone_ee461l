@@ -10,5 +10,7 @@ describe NewHire do
   subject { @new_hire }
 
   it { should respond_to(:workflows) }
+  it { should respond_to(:user_id) }
+  it { should respond_to(:user) }
 
 end
