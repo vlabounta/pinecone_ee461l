@@ -11,6 +11,7 @@
  *= require_self
  *= require font-awesome
  *= require app.css
+ *= require typeahead.css
  *= require nvd3/nv.d3.css
  */
 

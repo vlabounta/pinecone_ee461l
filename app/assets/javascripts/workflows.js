@@ -47,7 +47,7 @@ $(document).ready( function() {
     //var tasks = ["task1","task2", "task3"];
     //var jsonTasks = JSON.stringify(tasks);
 
-    $('#testTasks').on('click', function(e) {
+    $('#createWorkflow').on('click', function(e) {
 
         // Get form values
            var $title = $('#workflow_title').val();
@@ -62,14 +62,51 @@ $(document).ready( function() {
         $.ajax({
             type: 'POST',
             url: '/workflows',
-            data: { workflow: { title: $title, description: $description, tags: $tags, goon_email: $goon_email, tasks: JSON.stringify($tasks) } }
+            data: { workflow: { title: $title, description: $description, tags: $tags, goon_email: $goon_email, tasks: JSON.stringify($tasks) } },
         });
-    })
+        
+    });
+
+    // Event handler, create new input field when the last one has data entered
+    $('#tab2 fieldset').on('keyup', 'input.final-task', function() {
+        $(this).removeClass('final-task');
+       // '#tab2 div:last-child'
+       $('#tab2 fieldset').append('<div class="control-group">'+
+                            '<label class="control-label" for="task9">Task3</label><div class="controls form-group">'+
+                                           '<div class="col-md-10">'+
+                                            '<input type="text" id="task9" name="task9" placeholder="" class="form-control task final-task">'+
+                                            '</div>');
+       //$('.final-task').bind('keyup');
+    });
+
+    $('.task').typeahead({
+        name: 'tasks',
+        remote: '/tasks'
+    });
+
+    /*$('.task').each( function( i, e ) {
+        var select = $(e);
+        options = {};
+        options.ajax = {
+            url: '/tasks',
+            dataType: 'json',
+            data: function( term, page ) { return { q: term, page: page } },
+            results: function( data, page ) { return { results: data } }
+        };
+
+        options.dropdownCssClass = 'bigdrop';
+    
+        select.select2(options);
+    });*/
+
+   
+    
 })
 
-$('.task').keyup(function() {
-    var emtpyTaskFields = $(this).closest('.control-group')
-                                 .find('input[value=""]');
+
+
+
+    /*var emtpyTaskFields = $(this).val();
 
     if (emptyTaskFields.length == 0) {
         var taskFields = $(this).closest("fieldset");
@@ -98,27 +135,7 @@ $('.task').keyup(function() {
         col.appendChild(input);
         formGroup.appendChild(col);
         group.appendChild(formGroup);
-    }
-})
+    }*/
 
-$('#workflowAddTask').select2({
-	placeholder: 'Add a task...',
-	minimumInputLength: 1,
-	ajax: {
-		url: '/tasknames.json',
-		datatype: 'jsonp',
-		data: function( term, page ) {
-			return {
-				q: term, //search term
-			};
-		},
-		results: function ( data, page ) {
-			return {
-				results: data
-			};
-		}
-	},
-	initSelection: function( element, callback ) {
 
-	}
-})
+

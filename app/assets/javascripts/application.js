@@ -51,6 +51,7 @@
 //= require jquery.autogrow-textarea
 //= require jquery.bootstrap.wizard
 //= require select2
+//= require typeahead.min
 //= require app
 //= require settings
 //= require index

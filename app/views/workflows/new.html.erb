@@ -33,6 +33,7 @@
                                 <%= f.email_field :goon_email, :placeholder => 'Goon' %> 
                                 <%= f.text_field :tasks, :placeholder => 'Task' %>  
                               <% end %>
+                         <% end %>
 
                         </div>
                         <div class="tab-pane" id="tab2">
@@ -43,7 +44,7 @@
                                         <div class="controls form-group">
                                             <div class="col-md-10">
                                                 <input type="text" id="task1" name="task1"
-                                                                          placeholder="" class="form-control task">
+                                                                           class="form-control task">
                                             </div>
                                         </div>
                                     </div>
@@ -61,7 +62,7 @@
                                         <div class="controls form-group">
                                             <div class="col-md-10">
                                                 <input type="text" id="task3" name="task3"
-                                                                          placeholder="" class="form-control task">
+                                                                          placeholder="" class="form-control task final-task">
                                             </div>
                                         </div>
                                     </div>
@@ -75,7 +76,7 @@
                           
                         
                         </div>
-                        <% end %>
+                       
                            <!--
                             <form class="form-horizontal form-condensed" action='' method="POST">
                                 <fieldset>
@@ -153,7 +154,7 @@
                                     <button class="btn btn-primary pull-right" >Next <i class="icon-caret-right"></i></button>
                                 </li>
                                 <li class="finish" style="display: none">
-                                    <button class="btn btn-success pull-right" >Finish <i class="icon-ok"></i></button>
+                                    <button class="btn btn-success pull-right" id="createWorkflow" >Submit <i class="icon-ok"></i></button>
                                 </li>
                             </ul>
                         </div>
