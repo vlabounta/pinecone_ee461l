@@ -1,6 +1,6 @@
 class WorkflowController < ApplicationController
   def new
-    
+    @workflow = Workflow.new
   end
 
   def create

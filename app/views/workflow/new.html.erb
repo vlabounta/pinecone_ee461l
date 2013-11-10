@@ -21,6 +21,19 @@
                     </div>
                     <div class="tab-content">
                         <div class="tab-pane" id="tab1">
+                        <%= twitter_bootstrap_form_for @workflow, :class => 'form-horizontal form-condensed', role: 'form' do |f| %>
+
+                        	<%= f.inputs do %>
+                        		<%= f.text_field :title, :placeholder => 'Title' %>
+                        		<%= f.text_field :description, :placeholder => 'Description' %>
+
+                        	<% end %>
+
+                        	<%= f.actions do %>
+                        		<%= f.submit "Create Workflow" %>
+                        	<% end %>
+                        <% end %>
+                        
                             <form class="form-horizontal form-condensed" action='' method="POST">
                                 <fieldset>
                                     <div class="control-group">
