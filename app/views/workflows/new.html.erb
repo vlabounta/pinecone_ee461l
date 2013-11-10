@@ -30,21 +30,22 @@
                         		<%= f.text_field :title, :placeholder => 'Title' %>
                                 <%= f.text_field :description, :placeholder => 'Description' %>
                                 <%= f.text_field :tags, :placeholder => 'Tag, Tag, ...' %> 
-                                <%= f.email_field :goon_email, :placeholder => 'Goon' %>   
-                        
-                        </div>
-                        <div class="tab-pane" id="tab2">
-                                <%= f.text_field :task, :placeholder => 'Task' %>
-                        </div>
-                        <div class="tab-pane" id="tab3">
-                            <% end %>
+                                <%= f.email_field :goon_email, :placeholder => 'Goon' %> 
+                                <%= f.text_field :tasks, :placeholder => 'Task' %>  
+                              <% end %>
 
                             <%= f.actions do %>
                                 <%= f.submit "Create Workflow" %>
                             <% end %>
-                        <% end %>
                         </div>
-
+                        <div class="tab-pane" id="tab2">
+                                
+                        </div>
+                        <div class="tab-pane" id="tab3">
+                          
+                        
+                        </div>
+                        <% end %>
                            <!--
                             <form class="form-horizontal form-condensed" action='' method="POST">
                                 <fieldset>
