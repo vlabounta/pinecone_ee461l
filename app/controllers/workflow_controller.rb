@@ -15,7 +15,7 @@ class WorkflowController < ApplicationController
   end
 
   def destroy
-    Workflow.find(params[:id]).destroy
+    @workflow.destroy
     flash[:success] = "Workflow deleted"
     redirect_to root_path
   end
