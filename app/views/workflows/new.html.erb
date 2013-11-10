@@ -34,14 +34,44 @@
                                 <%= f.text_field :tasks, :placeholder => 'Task' %>  
                               <% end %>
 
-                            <%= f.actions do %>
-                                <%= f.submit "Create Workflow" %>
-                            <% end %>
                         </div>
                         <div class="tab-pane" id="tab2">
-                                
+                             <form class="form-horizontal form-condensed" action='' method="POST">
+                                <fieldset>
+                                    <div class="control-group">
+                                        <label class="control-label"  for="task1">Task1</label>
+                                        <div class="controls form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" id="task1" name="task1"
+                                                                          placeholder="" class="form-control task">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label"  for="task2">Task2</label>
+                                        <div class="controls form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" id="task2" name="task2"
+                                                                          placeholder="" class="form-control task">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label"  for="task3">Task3</label>
+                                        <div class="controls form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" id="task3" name="task3"
+                                                                          placeholder="" class="form-control task">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                            </form>
+                            <button class="btn btn-primary btn-large" id="testTasks">SUBMIT</button>
                         </div>
                         <div class="tab-pane" id="tab3">
+
                           
                         
                         </div>

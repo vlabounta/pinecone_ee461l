@@ -211,6 +211,7 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder (= 1.0.2)
   jquery-rails (= 2.2.1)
+  json
   libnotify (= 0.8.0)
   pg (= 0.15.1)
   rails (= 4.0.0)
