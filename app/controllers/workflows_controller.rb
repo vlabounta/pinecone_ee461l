@@ -6,6 +6,7 @@ class WorkflowsController < ApplicationController
   def create
     @workflow = current_user.workflows.build(workflow_params)
     @workflow.author_id = current_user.id
+    @workflow.new_hire = NewHire.find(email: params[:workflow][:goon_email])
     if @workflow.save
       flash[:success] = "#{@workflow.title} workflow successfully created!"
       redirect_to root_url
