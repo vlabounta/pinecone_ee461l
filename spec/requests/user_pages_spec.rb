@@ -90,4 +90,25 @@ describe "UserPages" do
     end
   end
 
+  describe "dashboard" do
+    let(:user) { FactoryGirl.create(:user) }
+    before do
+      sign_in user
+      visit root_path
+    end
+
+    it { should have_link('Connect my mailbox', href: '/connect_mailbox/create') }
+# this is failing because the method that queries the context account sees that 'abcde' is 
+# not a valid id. 
+# TODO: determine better solution
+#    describe "after connecting a mailbox" do
+#      before do
+#        user.update_attribute(:context_account_id, 'abcde')
+#        visit root_path
+#      end
+#
+#      it { should_not have_link('Connect my mailbox', href: '/connect_mailbox/create') }
+#    end
+  end
+
 end
