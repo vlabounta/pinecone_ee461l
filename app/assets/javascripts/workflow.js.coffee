@@ -16,6 +16,7 @@ $('.task').keyup(function() {
         var label = document.createElement('label');
         label.setAttribute("class", "control-label");
         label.setAttribute("for", "task" + num);
+        label.appendChild(document.createTextNode("Task" + num));
         group.appendChild(label);
 
         var formGroup = document.createElement('div');
