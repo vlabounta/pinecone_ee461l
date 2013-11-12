@@ -4,16 +4,13 @@ class WorkflowsController < ApplicationController
   end
 
   def create
-     logger.info({:user_agent => request.user_agent, :remote_ip => request.remote_ip}.inspect)
-
-    logger.info(params.inspect)
     @workflow = current_user.workflows.build(workflow_params)
     @workflow.author_id = current_user.id
     @workflow.new_hire = NewHire.find_by(email: params[:workflow][:goon_email])
 
-    tasks = JSON.parse( params[:workflow][:tasks] )
+    tasks = params[:workflow][:tasks]
     tasks.each do |task_title|
-      task = Task.new(title: task_title)
+      task = Task.new(title: task_title) unless task_title.nil?
       if task.save
         @workflow.tasks << task
       end
