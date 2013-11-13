@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.order('title').finder(params[:q]).page(params[:page]).per(params[:per])
+    #@tasks = Task.order('title').finder(params[:q]).page(params[:page]) #for select2
+    @tasks = Task.find( :all, :select => 'title' ).map( &:title ) #for typeahead
     respond_to do |format|
       format.html
       format.json { render json: @tasks }

@@ -15,6 +15,8 @@
 //= require jquery/jquery-migrate-1.1.0.min
 //= require jquery_ujs
 //= require icheck.js/jquery.icheck
+//= require jquery-maskedinput/jquery.maskedinput
+//= require parsley/parsley
 //= require sparkline/jquery.sparkline
 //= require jquery.slimscroll
 //= require nvd3/lib/d3.v2
@@ -42,12 +44,14 @@
 //= require bootstrap-colorpicker
 //= require bootstrap-datepicker
 //= require bootstrap-switch
+//= require bootstrap-select/bootstrap-select
 //= require gmap3
 //= require jquery.vmap
 //= require jquery-ui-1.10.1.custom
 //= require jquery.autogrow-textarea
 //= require jquery.bootstrap.wizard
 //= require select2
+//= require typeahead.min
 //= require app
 //= require settings
 //= require index

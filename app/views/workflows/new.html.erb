@@ -1,4 +1,5 @@
 
+<%= javascript_include_tag 'workflows' %>
 <div class="content container">
     <div class="row">
         <div class="col-md-7 col-md-offset-1">
@@ -19,45 +20,35 @@
                     <div id="bar" class="progress progress-small">
                         <div class="progress-bar progress-bar-inverse"></div>
                     </div>
+
                     <div class="tab-content">
-                        <div class="tab-pane" id="tab1">
+                        <div class="tab-pane active" id="tab1">
+
                         <%= twitter_bootstrap_form_for @workflow, :class => 'form-horizontal form-condensed', role: 'form' do |f| %>
 
                         	<%= f.inputs do %>
                         		<%= f.text_field :title, :placeholder => 'Title' %>
                                 <%= f.text_field :description, :placeholder => 'Description' %>
                                 <%= f.text_field :tags, :placeholder => 'Tag, Tag, ...' %> 
-                                <%= f.email_field :goon_email, :placeholder => 'Goon' %>   
-                        
+                                <%= f.email_field :goon_email, :placeholder => 'Goon' %> 
+                                <%= f.text_field :tasks, :placeholder => 'Task' %>  
+                              <% end %>
+                         <% end %>
 
                         </div>
                         <div class="tab-pane" id="tab2">
-                             
-                        </div>
-                        <div class="tab-pane" id="tab3">
-                                
-                        </div>
-
-                            <% end %>
-
-                            <%= f.actions do %>
-                                <%= f.submit "Create Workflow" %>
-                            <% end %>
-                        <% end %>
-                            <form class="form-horizontal form-condensed" action='' method="POST">
+                             <form class="form-horizontal form-condensed" action='' method="POST">
                                 <fieldset>
-                                	<div class="control-group">
-                                        <!-- Task1 -->
+                                    <div class="control-group">
                                         <label class="control-label"  for="task1">Task1</label>
                                         <div class="controls form-group">
                                             <div class="col-md-10">
                                                 <input type="text" id="task1" name="task1"
-                                                                          placeholder="" class="form-control task">
+                                                                           class="form-control task">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <!-- Task2 -->
                                         <label class="control-label"  for="task2">Task2</label>
                                         <div class="controls form-group">
                                             <div class="col-md-10">
@@ -67,7 +58,47 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <!-- Task3 -->
+                                        <label class="control-label"  for="task3">Task3</label>
+                                        <div class="controls form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" id="task3" name="task3"
+                                                                          placeholder="" class="form-control task final-task">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                            </form>
+                            <button class="btn btn-primary btn-large" id="testTasks">SUBMIT</button>
+                        </div>
+                        <div class="tab-pane" id="tab3">
+
+                          
+                        
+                        </div>
+                       
+                           <!--
+                            <form class="form-horizontal form-condensed" action='' method="POST">
+                                <fieldset>
+                                	<div class="control-group">
+                                        <label class="control-label"  for="task1">Task1</label>
+                                        <div class="controls form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" id="task1" name="task1"
+                                                                          placeholder="" class="form-control task">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label"  for="task2">Task2</label>
+                                        <div class="controls form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" id="task2" name="task2"
+                                                                          placeholder="" class="form-control task">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
                                         <label class="control-label"  for="task3">Task3</label>
                                         <div class="controls form-group">
                                             <div class="col-md-10">
@@ -82,7 +113,6 @@
                         </div>
                         <div class="tab-pane" id="tab4">
 	                    	<div class="control-group">
-                                        <!-- Title -->
                                         <label class="control-label"  for="title">Title:</label>
                                         <div class="controls form-group">
                                             <div class="col-md-10">
@@ -91,7 +121,6 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <!-- Description -->
                                         <label class="control-label"  for="description">Description</label>
                                         <div class="controls form-group">
                                             <div class="col-md-10">
@@ -100,7 +129,6 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <!-- Tags -->
                                         <label class="control-label"  for="tags">Tags</label>
                                         <div class="controls form-group">
                                             <div class="col-md-10">
@@ -109,7 +137,6 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <!-- Creator -->
                                         <label class="control-label"  for="creator">Creator</label>
                                         <div class="controls form-group">
                                             <div class="col-md-10">
@@ -117,7 +144,7 @@
                                             </div>
                                         </div>
                                     </div>
-                        </div>
+                        </div>-->
                         <div class="description">
                             <ul class="pager wizard">
                                 <li class="previous">
@@ -127,7 +154,7 @@
                                     <button class="btn btn-primary pull-right" >Next <i class="icon-caret-right"></i></button>
                                 </li>
                                 <li class="finish" style="display: none">
-                                    <button class="btn btn-success pull-right" >Finish <i class="icon-ok"></i></button>
+                                    <button class="btn btn-success pull-right" id="createWorkflow" >Submit <i class="icon-ok"></i></button>
                                 </li>
                             </ul>
                         </div>
