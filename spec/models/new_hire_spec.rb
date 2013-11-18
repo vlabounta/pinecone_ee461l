@@ -13,4 +13,7 @@ describe NewHire do
   it { should respond_to(:user_id) }
   it { should respond_to(:user) }
 
+  it { should belong_to(:user) }
+  it { should have_many(:workflows) }
+
 end

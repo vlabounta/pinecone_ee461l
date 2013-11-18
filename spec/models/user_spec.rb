@@ -22,6 +22,9 @@ describe User do
   it { should be_valid }
   it { should_not be_admin }
 
+  it { should have_many(:workflows) }
+  it { should have_many(:new_hires) }
+
   describe "with admin attribute set to 'true'" do
     before do
       @user.save!

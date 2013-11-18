@@ -15,4 +15,8 @@ describe Task do
   it { should respond_to(:messages) }
   it { should respond_to(:workflow_id) }
   it { should respond_to(:workflow) }
+
+  it { should belong_to(:workflow) }
+  it { should have_many(:messages) }
+
 end

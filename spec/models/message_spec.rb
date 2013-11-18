@@ -13,4 +13,6 @@ describe Message do
 
   it { should respond_to(:task_id) }
   it { should respond_to(:task) }
+
+  it { should belong_to(:task) }
 end

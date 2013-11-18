@@ -17,4 +17,7 @@ describe Workflow do
   it { should respond_to(:new_hire_id) }
   it { should respond_to(:new_hire) }
 
+  it { should belong_to(:user) }
+  it { should belong_to(:new_hire) }
+  it { should have_many(:tasks) }
 end
